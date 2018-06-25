@@ -1,14 +1,16 @@
 package interfaces;
 
+import java.util.Date;
+
 public interface Validation {
 
-    public boolean validateText();
-    public boolean validateInt();
-    public boolean validateLong();
-    public boolean validateZIP();
-    public boolean validateStartDateBeforeEndDate();
-    public boolean validateEmail();
-    public boolean validateIBAN();
-    public boolean validateBIC();
-    public boolean validateWorktime();
+    public boolean validateText(String text);
+    public boolean validateInt(int num);
+    public boolean validateLong(Long num);
+    public boolean validateZIP(String zip);
+    public boolean validateStartDateBeforeEndDate(Date start, Date end);
+    public boolean validateEmail(String mail);
+    public boolean validateIBAN(String iban);
+    public boolean validateBIC(String BIC);
+    public boolean validateWorktime(Long worktimeInMin);
 }
