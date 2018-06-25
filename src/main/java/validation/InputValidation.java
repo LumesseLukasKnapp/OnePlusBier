@@ -3,7 +3,6 @@ package validation;
 import interfaces.Validation;
 
 import java.util.Date;
-import java.util.regex.Pattern;
 
 public class InputValidation implements Validation {
 
@@ -28,19 +27,19 @@ public class InputValidation implements Validation {
     }
 
     public boolean validateEmail(String mail) {
-        return false;
+        return mail.matches("[a-z]+@{1}[a-z]+.{1}[a-z]+");
     }
 
     public boolean validateIBAN(String iban) {
-        return false;
+        return iban.matches("^DE\\d{2}\\s?([0-9a-zA-Z]{4}\\s?){4}[0-9a-zA-Z]{2}$");
     }
 
-    public boolean validateBIC(String BIC) {
-        return false;
+    public boolean validateBIC(String bic) {
+        return bic.matches("([a-zA-Z]{4}[a-zA-Z]{2}[a-zA-Z0-9]{2}([a-zA-Z0-9]{3})?)");
     }
 
     public boolean validateWorktime(Long worktimeInMin) {
-        return false;
+        return worktimeInMin < 540L;
     }
 
 }
