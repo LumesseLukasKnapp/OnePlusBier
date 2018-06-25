@@ -11,21 +11,11 @@ public class InputValidation implements Validation {
         return text.matches("[a-z|A-Z| ä|ö|ü|ß|Ö|Ä|Ü]+");
     }
 
-    public boolean validateInt(int num) {
-        return false;
-    }
-
-    public boolean validateLong(Long num) {
-        return false;
-    }
-
     public boolean validateZIP(String zip) {
-        return false;
+        return zip.matches("[\\d]{5}");
     }
 
-    public boolean validateStartDateBeforeEndDate(Date start, Date end) {
-        return false;
-    }
+    public boolean validateStartDateBeforeEndDate(Date start, Date end) { return start.before(end);}
 
     public boolean validateEmail(String mail) {
         return false;

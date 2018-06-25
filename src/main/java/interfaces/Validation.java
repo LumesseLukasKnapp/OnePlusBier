@@ -5,8 +5,6 @@ import java.util.Date;
 public interface Validation {
 
     public boolean validateText(String text);
-    public boolean validateInt(int num);
-    public boolean validateLong(Long num);
     public boolean validateZIP(String zip);
     public boolean validateStartDateBeforeEndDate(Date start, Date end);
     public boolean validateEmail(String mail);
